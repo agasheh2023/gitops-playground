@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-bg-green
+  namespace: bg
+  labels:
+    app: app-bg
+    version: green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-bg
+      version: green
+  template:
+    metadata:
+      labels:
+        app: app-bg
+        version: green
+    spec:
+      containers:
+      - name: web
+        image: nginx:1.25.5
+        ports:
+        - containerPort: 80
