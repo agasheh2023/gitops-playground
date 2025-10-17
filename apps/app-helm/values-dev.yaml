@@ -1,6 +1,6 @@
 replicaCount: 1
 env: dev
-banner: "Hello from DEV Stage"
+banner: "Hello from DEV v2"
 image:
   repository: nginx
   tag: "1.25.5"
