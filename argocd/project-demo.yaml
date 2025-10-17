@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: demo
+  namespace: argocd
+spec:
+  description: Demo project for multi-env GitOps
+  sourceRepos:
+    - REPO_URL
+  destinations:
+    - server: https://kubernetes.default.svc
+      namespace: '*'
