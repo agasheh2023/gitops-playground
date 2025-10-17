@@ -1,4 +1,4 @@
-replicaCount: 2
+replicaCount: 3
 env: staging
 banner: "Hello from STAGING"
 image:
