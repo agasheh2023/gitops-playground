@@ -18,8 +18,29 @@ spec:
         app: app-bg
         version: green
     spec:
+      initContainers:
+      - name: render
+        image: busybox
+        command:
+        - sh
+        - -c
+        - sed "s/{{COLOR}}/GREEN/" /tmp/in/index.html > /tmp/out/index.html
+        volumeMounts:
+        - name: html-src
+          mountPath: /tmp/in
+        - name: html
+          mountPath: /tmp/out
       containers:
       - name: web
-        image: nginx:1.25.6
+        image: nginx:1.25.5
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
         ports:
         - containerPort: 80
+      volumes:
+      - name: html-src
+        configMap:
+          name: app-bg-html
+      - name: html
+        emptyDir: {}
