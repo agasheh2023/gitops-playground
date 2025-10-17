@@ -1,0 +1,7 @@
+replicaCount: 1
+env: dev
+banner: "Hello from DEV"
+image:
+  repository: nginx
+  tag: "1.25.5"
+nodePort: 30091
