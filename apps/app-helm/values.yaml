@@ -1,0 +1,7 @@
+replicaCount: 1
+env: base
+banner: "Hello from Helm (base)"
+image:
+  repository: nginx
+  tag: "1.25.5"
+nodePort: 30091
