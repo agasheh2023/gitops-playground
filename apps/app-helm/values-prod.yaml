@@ -1,0 +1,7 @@
+replicaCount: 4
+env: prod
+banner: "Hello from PROD"
+image:
+  repository: nginx
+  tag: "1.25.5"
+nodePort: 30093
