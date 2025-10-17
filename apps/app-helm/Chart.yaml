@@ -1,0 +1,5 @@
+apiVersion: v2
+name: app-helm
+version: 0.1.0
+description: Simple Nginx Helm chart for GitOps demo
+type: application
