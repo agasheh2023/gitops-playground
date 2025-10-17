@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-bg-html
+  namespace: bg
+data:
+  index.html: |
+    <html><body style="font-family:sans-serif">
+    <h1>Blue/Green Demo</h1>
+    <p>Served by: {{COLOR}}</p>
+    </body></html>
