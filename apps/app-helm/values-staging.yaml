@@ -1,0 +1,7 @@
+replicaCount: 2
+env: staging
+banner: "Hello from STAGING"
+image:
+  repository: nginx
+  tag: "1.25.5"
+nodePort: 30092
